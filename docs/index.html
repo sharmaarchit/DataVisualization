@@ -2,13 +2,32 @@
 <html>
 <head>
 
-<h1 style="color: darkblue;font-family: arial; font-size: 36px;">Top 10 most popular names for kids in US in past 5 years</h1>
+<h1 style="color: darkblue;font-family: arial; font-size: 36px;">Most popular names for kids in US in past 5 years</h1>
 
 
 </head>
 <script src='https://d3js.org/d3.v5.min.js'></script>
 <body onload='init()'>
 <script src='https://d3js.org/d3.v5.min.js'></script>
+
+  <div class='chartControl'>
+	<div class='row'>
+					<div class='radio'>
+						<label class='radiobutton'>
+							<input type="radio" name="gender" value="Male" onclick='change(this.value)'> male
+						</label>
+						<label class='radiobutton'>
+							<input type="radio" name="gender" value="Female" onclick='change(this.value)'> female
+						</label>
+						<label class='radiobutton'>
+							<input type="radio" name="gender" value="All" onclick='change(this.value)' checked > both
+						</label>
+					</div>
+			<svg class='chart'>
+			</svg>
+	</div>
+</div>
+
 <style> .chart rect {fill: darkblue; stroke: white; }
 #tooltip {
 opacity:0;
